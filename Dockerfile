@@ -11,6 +11,8 @@ ENV CHROME_BIN /usr/bin/chromium-browser
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN . "/root/.nvm/nvm.sh"
 
+RUN npm install -g pnpm
+
 COPY --from=jnlp /usr/local/bin/jenkins-agent /usr/local/bin/jenkins-agent
 COPY --from=jnlp /usr/share/jenkins/agent.jar /usr/share/jenkins/agent.jar
 
