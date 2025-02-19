@@ -1,6 +1,6 @@
 FROM jenkins/inbound-agent:alpine-jdk21 as jnlp
 
-FROM node:20-alpine
+FROM node:22-alpine
 
 RUN apk -U add openjdk21-jre git curl bash
 RUN apk -U add --no-cache bash zip make gcc g++ python3 linux-headers paxctl gnupg
